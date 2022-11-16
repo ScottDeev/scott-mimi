@@ -60,14 +60,14 @@ export default function SignIn() {
         <form className='w-full mt-[36px] flex flex-col gap-[24px]' onSubmit={handleSubmit}>
           <label className="flex flex-col gap-[20px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">Email</span>
-            <input className={`border ${(errorEmail || emailValidError) ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px]`}  type="text" placeholder="name@gmail.com" onChange={(e) => setEmail(e.target.value)} />
+            <input className={`border ${(errorEmail || emailValidError) ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px]  outline-[#475467]`}  type="text" placeholder="name@gmail.com" onChange={(e) => setEmail(e.target.value)} />
             {errorEmail && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your email address</span>}
             {emailValidError && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Email is incorrect</span>}
           </label>
           <label className="flex flex-col gap-[20px] w-full mb-[20px]">
             <span className="text-gray-700 text-[14px] font-[500]">Password</span>
             <div className='flex w-full relative'>
-              <input className={`w-full border ${errorPassword ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px]`} type={showPassword ? 'text': 'password'} placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
+              <input className={`w-full border ${errorPassword ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px] outline-[#475467]`} type={showPassword ? 'text': 'password'} placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
               <img className='absolute top-[18px] right-[16px] cursor-pointer' src={eyeicon} alt="eyeicon" onClick={() => passwordToggle()} />
             </div>
             {errorPassword && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your password</span>}
