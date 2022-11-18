@@ -72,7 +72,7 @@ export default function SignUp() {
   }
   return (
     <div className='flex flex-row items-stretch w-full'>
-      <div className='md:w-[50%] w-full lg:px-[151px] md:px-[60px] px-[16px] py-[56px]'>
+      <div className='md:w-[50%] w-full lg:px-[151px] md:px-[60px] px-[16px] md:py-[56px] py-[32px]'>
         <Logo/>
         <div className='font-[400] mt-[48px]'>
           <h1 className='text-[40px]'>Create an account</h1>
@@ -82,37 +82,37 @@ export default function SignUp() {
           <label className="flex flex-col gap-[8px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">First name</span>
             <input className={`border ${errorFname ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}  type="text" placeholder="Enter your first name" onChange={(e) => setFname(e.target.value)} />
-            {errorFname && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your first name</span>}
+            {errorFname && <span className="text-[#F83F23] text-[14px]">Please enter your first name</span>}
 
           </label>
           <label className="flex flex-col gap-[8px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">Last name</span>
             <input className={`border ${errorLname ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}  type="text" placeholder="Enter your last name" onChange={(e) => setLname(e.target.value)} />
-            {errorLname && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your last name</span>}
+            {errorLname && <span className="text-[#F83F23] text-[14px]">Please enter your last name</span>}
           </label>
           <label className="flex flex-col gap-[8px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">Email</span>
             <input className={`border ${(errorEmail || emailValidError) ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}  type="text" placeholder="name@gmail.com" onChange={(e) => setEmail(e.target.value)} />
-            {errorEmail && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your email address</span>}
-            {emailValidError && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Email is incorrect</span>}
+            {errorEmail && <span className="text-[#F83F23] text-[14px]">Please enter your email address</span>}
+            {emailValidError && <span className="text-[#F83F23] text-[14px]">Email is incorrect</span>}
           </label>
           <label className="flex flex-col gap-[8px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">Password</span>
             <div className='flex w-full relative'>
               <input className={`w-full border ${errorPassword ? 'border-[#F83F23]': 'border-gray-300'} rounded-[8px] py-[10px] px-[14px] outline-[#475467]`} type={showPassword ? 'text': 'password'} placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
-              {!showPassword && <img className='absolute top-[17px] right-[16px] cursor-pointer' src={eyeicon} alt="eyeicon" onClick={() => passwordToggle()} />}
-              {showPassword && <img className='absolute top-[15px] right-[16px] cursor-pointer' src={eyecancel} alt="eyeicon" onClick={() => passwordToggle()} />}
+              {showPassword && <img className='absolute top-[17px] right-[16px] cursor-pointer' src={eyeicon} alt="eyeicon" onClick={() => passwordToggle()} />}
+              {!showPassword && <img className='absolute top-[15px] right-[16px] cursor-pointer' src={eyecancel} alt="eyeicon" onClick={() => passwordToggle()} />}
             </div>
-            {errorPassword && <span className="text-[#F83F23] text-[14px] mt-[-12px]">Please enter your password</span>}
+            {errorPassword && <span className="text-[#F83F23] text-[14px]">Please enter your password</span>}
           </label>
-          <p className='font-[400]'>By Registering you are automatically accepting our <span className='text-[#4CBB88] font-[850]'>Terms </span>  and 
-         <span className='text-[#4CBB88] font-[850]'> Conditions </span></p>
+          <p className='font-[400]'>By Registering you are automatically accepting our <span className='text-[#D2120F] font-[850]'>Terms </span>  and 
+         <span className='text-[#D2120F] font-[850]'> Conditions </span></p>
          <label className="flex flex-col gap-[6px] w-full mt-[8px]">
           <input className="cursor-pointer border border-[#D2120F] rounded-[8px] py-[12px] px-[14px] bg-[#D2120F] text-white hover:bg-white hover:text-[#D2120F] transition-all" 
           id="btn__submit" type="submit" value="Create Account" />
         </label>
         <div>
-          <p>Have an account? <Link to='/signin' className='text-[#4CBB88] font-[850]'>Login</Link> </p>
+          <p>Have an account? <Link to='/signin' className='text-[#D2120F] font-[850]'>Login</Link> </p>
         </div>
         </form>
       </div>
